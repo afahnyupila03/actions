@@ -1,0 +1,17 @@
+name: Test Project
+on: push
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3 ## To run an action, use the uses-keyword instead of the run-keyword.
+        # with:  ## Configuration to action
+      - name: Install NodeJS
+        uses: actions/setup-node@v6
+        with: 
+          node-version: 18
+      - name: Install dependencies
+        run: npm ci ## Install all exact versions of package dependencies locked into package-lock.json file.
+      - name: Run tests
+        run: npm test
