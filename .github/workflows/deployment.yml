@@ -24,7 +24,7 @@ jobs:
       - name: Install NodeJS
         uses: actions/setup-node@v3
         with: 
-        node-version: 18
+          node-version: 18
       - name: Install dependencies
         run: npm ci ## Install all exact versions of package dependencies locked into package-lock.json file.
       - name: Build project
