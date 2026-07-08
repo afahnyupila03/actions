@@ -16,6 +16,8 @@ jobs:
       - name: Run tests
         run: npm test
   deploy: 
+    needs: test ## Runs only after job specified in field is done before this job executes. 
+    # In case of multiple jobs use [] and separate with commas.
     runs-on: windows-latest
     steps:
       - name: Get code
