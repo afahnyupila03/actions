@@ -1,5 +1,5 @@
 name: Deploy Project
-on: [push, workflow_dispatch]
+on: [push, workflow_dispatch] # In-case of using multiple event triggers.
 jobs:
   test:
     runs-on: windows-latest
